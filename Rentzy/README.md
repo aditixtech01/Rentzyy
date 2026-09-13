@@ -1,29 +1,33 @@
-# 🏠 Rentzyy – Find. Rent. Live.
+ 🏠 Rentzyy – Find. Rent. Live.
 
-Rentzyy is a modern rental property platform built with React.js.
+Rentzyy is a modern rental property platform built with git statusReact.js.
 
-It helps tenants discover rental properties, apply for properties, track application status, save favorites, and receive important announcements.
+It provides a simple platform where tenants can discover rental properties, apply for properties, track application status, save favorites, and receive important announcements.
 
 Owners can manage rental properties, view tenant applications, accept or reject applications, and publish announcements.
 
-## 🚀 Features
+> 🚧 Project Status:Frontend MVP completed. Backend integration is planned for future versions.
 
-### 👤 Tenant
+---
+
+ ✨ Features
+
+👤 Tenant
 
 * Tenant Signup & Login
 * Browse rental properties
-* Search by location
+* Search properties by location
 * Filter by property type
 * Filter by maximum rent
-* View property details
-* Contact owner
-* Apply for properties
+* View detailed property information
+* Contact property owner
+* Apply for rental properties
 * Track application status
 * Save favorite properties
 * Receive announcements
 * Mark notifications as read
 
-### 🏢 Owner
+ 🏢 Owner
 
 * Owner Signup & Login
 * Owner Dashboard
@@ -35,27 +39,33 @@ Owners can manage rental properties, view tenant applications, accept or reject 
 * Delete announcements
 * View dashboard statistics
 
-## 🔐 Authentication
+---
+🔐 Authentication & Access Control
 
-* Tenant and Owner role-based login
+* Tenant and Owner role-based authentication
 * Protected routes
 * Role-based dashboard access
 * LocalStorage-based authentication
+* Separate Tenant and Owner workflows
 
-## 🛠️ Tech Stack
+ 🛠️ Tech Stack
 
-* React.js
-* JavaScript
-* HTML5
-* CSS3
-* React Router
-* LocalStorage
-* Vite
-* Git & GitHub
+| Technology   | Usage                       |
+| ------------ | --------------------------- |
+| React.js     | Frontend development        |
+| JavaScript   | Application logic           |
+| HTML5        | Structure                   |
+| CSS3         | Styling & responsive design |
+| React Router | Page navigation & routing   |
+| LocalStorage | Frontend data persistence   |
+| Vite         | Development & build tool    |
+| Git & GitHub | Version control             |
 
-## 📂 Project Structure
+---
 
-```text
+ 📂 Project Structure
+
+
 Rentzyy/
 │
 ├── public/
@@ -85,39 +95,44 @@ Rentzyy/
 ├── package.json
 ├── vite.config.js
 └── README.md
-```
 
-## ⚙️ Installation
 
-Clone the repository:
+---
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
+ 🚀 Installation & Setup
 
-Go to the project folder:
+ 1. Clone the repository
 
-```bash
+bash
+git clone https://github.com/aditixtech01/Rentzyy.git
+
+
+ 2. Enter the project folder
+
+bash
 cd Rentzyy
-```
 
-Install dependencies:
 
-```bash
+ 3. Install dependencies
+
+bash
 npm install
-```
 
-Start the development server:
 
-```bash
+ 4. Start the development server
+
+bash
 npm run dev
-```
 
-## 🔄 Application Flow
 
-### Tenant Flow
+Open the local URL provided by Vite in your browser.
 
-```text
+---
+
+🔄 Application Flow
+👤 Tenant Flow
+
+
 Signup
    ↓
 Login
@@ -130,12 +145,10 @@ Apply for Property
    ↓
 My Applications
    ↓
-Pending / Accepted / Rejected
-```
 
-### Owner Flow
+ 🏢 Owner Flow
 
-```text
+
 Signup
    ↓
 Login
@@ -149,9 +162,9 @@ View Applications
 Accept / Reject
    ↓
 Publish Announcements
-```
 
-## 💾 Current Data Storage
+
+💾 Current Data Storage
 
 The current frontend MVP uses LocalStorage for:
 
@@ -162,9 +175,11 @@ The current frontend MVP uses LocalStorage for:
 * Announcements
 * Notifications
 
-A backend and database will be integrated in a future version.
+A backend API and database will be integrated in a future version.
 
-## 🔮 Future Improvements
+---
+
+🔮 Future Improvements
 
 * Backend API integration
 * Database integration
@@ -177,14 +192,21 @@ A backend and database will be integrated in a future version.
 * Late payment penalties
 * Cloud image storage
 * Advanced property search
-* Deployment
+* Property owner profiles
+* User reviews and ratings
+* Production deployment
 
-## 👩‍💻 Developer
+---
 
-**Aditi**
+👩‍💻 Developer
+
+Aditi
 
 Built & Designed with ❤️ using React.js.
 
-### Rentzyy
+---
 
-**Find. Rent. Live.**
+ 🏠 Rentzyy
+Find. Rent. Live.
+
+A modern rental platform designed to make finding and managing rental properties easier.
