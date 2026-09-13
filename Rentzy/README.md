@@ -1,16 +1,190 @@
-# React + Vite
+# 🏠 Rentzyy – Find. Rent. Live.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rentzyy is a modern rental property platform built with React.js.
 
-Currently, two official plugins are available:
+It helps tenants discover rental properties, apply for properties, track application status, save favorites, and receive important announcements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Owners can manage rental properties, view tenant applications, accept or reject applications, and publish announcements.
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👤 Tenant
 
-## Expanding the ESLint configuration
+* Tenant Signup & Login
+* Browse rental properties
+* Search by location
+* Filter by property type
+* Filter by maximum rent
+* View property details
+* Contact owner
+* Apply for properties
+* Track application status
+* Save favorite properties
+* Receive announcements
+* Mark notifications as read
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🏢 Owner
+
+* Owner Signup & Login
+* Owner Dashboard
+* Add rental properties
+* Manage properties
+* View tenant applications
+* Accept or Reject applications
+* Publish announcements
+* Delete announcements
+* View dashboard statistics
+
+## 🔐 Authentication
+
+* Tenant and Owner role-based login
+* Protected routes
+* Role-based dashboard access
+* LocalStorage-based authentication
+
+## 🛠️ Tech Stack
+
+* React.js
+* JavaScript
+* HTML5
+* CSS3
+* React Router
+* LocalStorage
+* Vite
+* Git & GitHub
+
+## 📂 Project Structure
+
+```text
+Rentzyy/
+│
+├── public/
+│
+├── src/
+│   ├── Components/
+│   │   ├── Navbar/
+│   │   ├── Propertycard/
+│   │   └── Searchbar/
+│   │
+│   ├── Data/
+│   │   └── Data.jsx
+│   │
+│   ├── Pages/
+│   │   ├── Home/
+│   │   ├── Login/
+│   │   ├── Signup/
+│   │   ├── Dashboard/
+│   │   ├── Properties/
+│   │   ├── PropertiesDetails/
+│   │   ├── MyApplications/
+│   │   └── OwnerDashboard/
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Go to the project folder:
+
+```bash
+cd Rentzyy
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## 🔄 Application Flow
+
+### Tenant Flow
+
+```text
+Signup
+   ↓
+Login
+   ↓
+Browse Properties
+   ↓
+View Property Details
+   ↓
+Apply for Property
+   ↓
+My Applications
+   ↓
+Pending / Accepted / Rejected
+```
+
+### Owner Flow
+
+```text
+Signup
+   ↓
+Login
+   ↓
+Owner Dashboard
+   ↓
+Manage Properties
+   ↓
+View Applications
+   ↓
+Accept / Reject
+   ↓
+Publish Announcements
+```
+
+## 💾 Current Data Storage
+
+The current frontend MVP uses LocalStorage for:
+
+* User authentication
+* Properties
+* Applications
+* Favorites
+* Announcements
+* Notifications
+
+A backend and database will be integrated in a future version.
+
+## 🔮 Future Improvements
+
+* Backend API integration
+* Database integration
+* Secure authentication
+* Real-time notifications
+* Online rent payment
+* Tenant document verification
+* Police verification system
+* Rent payment history
+* Late payment penalties
+* Cloud image storage
+* Advanced property search
+* Deployment
+
+## 👩‍💻 Developer
+
+**Aditi**
+
+Built & Designed with ❤️ using React.js.
+
+### Rentzyy
+
+**Find. Rent. Live.**
