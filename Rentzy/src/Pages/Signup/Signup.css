@@ -1,0 +1,136 @@
+.signup-page {
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f8fafc;
+
+  padding: 30px;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+
+  background-color: white;
+
+  padding: 40px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.signup-card h1 {
+  text-align: center;
+
+  color: #0f172a;
+
+  margin-bottom: 8px;
+}
+
+.signup-card > p {
+  text-align: center;
+
+  color: #64748b;
+
+  margin-bottom: 25px;
+}
+
+.role-selection {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.role-selection button {
+  flex: 1;
+
+  padding: 12px;
+
+  border: 1px solid #cbd5e1;
+
+  background-color: white;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.role-selection button.active {
+  background-color: #0f172a;
+
+  color: white;
+
+  border-color: #0f172a;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  border-color: #0f172a;
+}
+
+.signup-btn {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background-color: #0f172a;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.login-text {
+  margin-top: 25px;
+
+  font-size: 14px;
+}
+
+.login-text span {
+  color: #0f172a;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}

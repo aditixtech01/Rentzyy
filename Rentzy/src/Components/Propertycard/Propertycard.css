@@ -1,0 +1,209 @@
+.property-card {
+  background-color: white;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition: 0.3s;
+
+  width: 100%;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Image */
+
+.property-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 14px 14px 0 0;
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Information */
+
+.property-info {
+  padding: 20px;
+}
+
+.property-info h3 {
+  font-size: 18px;
+
+  color: #0f172a;
+
+  margin-bottom: 10px;
+}
+
+.property-location {
+  color: #64748b;
+
+  font-size: 14px;
+
+  margin-bottom: 18px;
+}
+
+
+/* Property Details */
+
+.property-details {
+  display: flex;
+
+  gap: 15px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+/* Bottom */
+
+.property-bottom {
+  margin-top: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.property-bottom strong {
+  font-size: 17px;
+
+  color: #0f172a;
+}
+
+.property-bottom span {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+.property-bottom button {
+  border: none;
+
+  background-color: #f1f5f9;
+
+  color: #0f172a;
+
+  padding: 9px 13px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+}
+
+.property-bottom button:hover {
+  background-color: #e2e8f0;
+}
+.save-btn {
+  border: none;
+  background: transparent;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+.property-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.save-btn {
+  border: none;
+  background: transparent;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.details-btn {
+  border: none;
+
+  background-color: #0f172a;
+  color: white;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+}
+
+.details-btn:hover {
+  background-color: #1e293b;
+}
+.save-btn {
+  border: none;
+  background: transparent;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: transform 0.2s;
+}
+
+.save-btn:hover {
+  transform: scale(1.15);
+}
+@media (max-width: 768px) {
+  .property-card {
+    width: 100%;
+  }
+
+  .property-image {
+    height: 220px;
+  }
+
+  .property-info {
+    padding: 18px;
+  }
+
+  .property-info h3 {
+    font-size: 18px;
+  }
+
+  .property-details {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .property-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .property-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .details-btn {
+    flex: 1;
+  }
+}
