@@ -1,14 +1,26 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const navigate = useNavigate();
+
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("isLoggedIn") === "true"
+  );
+
+  const [userRole, setUserRole] = useState(
+    localStorage.getItem("userRole")
+  );
 
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userRole");
 
-    window.location.href = "/Login";
+    setIsLoggedIn(false);
+    setUserRole(null);
+
+    navigate("/Login");
   };
 
   return (
@@ -29,16 +41,19 @@ const Navbar = () => {
         <Link to="/Dashboard">
           Dashboard
         </Link>
-        {localStorage.getItem("userRole") === "Tenant" && (
-  <Link to="/MyApplications">
-    My Applications
-  </Link>
-)}
-        {localStorage.getItem("userRole") === "Owner" && (
-  <Link to="/OwnerDashboard">
-    Owner Dashboard
-  </Link>
-)}
+
+        {isLoggedIn && userRole === "Tenant" && (
+          <Link to="/MyApplications">
+            My Applications
+          </Link>
+        )}
+
+        {isLoggedIn && userRole === "Owner" && (
+          <Link to="/OwnerDashboard">
+            Owner Dashboard
+          </Link>
+        )}
+
         {isLoggedIn ? (
           <button
             className="navbar-login"

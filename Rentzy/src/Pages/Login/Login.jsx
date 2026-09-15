@@ -1,27 +1,22 @@
-
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
+  const navigate = useNavigate();
 
   const [role, setRole] = useState("Tenant");
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   const handleLogin = (e) => {
-
     e.preventDefault();
-
 
     // Check empty fields
     if (!email || !password) {
       alert("Please fill all fields");
       return;
     }
-
 
     // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -31,25 +26,21 @@ const Login = () => {
       return;
     }
 
-
     // Password validation
     if (password.length < 6) {
       alert("Password must be at least 6 characters");
       return;
     }
 
-
     // Get registered user
     const savedUser =
       JSON.parse(localStorage.getItem("user"));
-
 
     // No account
     if (!savedUser) {
       alert("No account found. Please sign up first.");
       return;
     }
-
 
     // Check email and password
     if (
@@ -60,39 +51,28 @@ const Login = () => {
       return;
     }
 
-
     // Check selected role
     if (role !== savedUser.role) {
       alert(`Please login as ${savedUser.role}`);
       return;
     }
 
-
-    // Login information save
+    // Save login information
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userRole", savedUser.role);
 
-
     alert("Login successful!");
-
 
     // Tenant → My Applications
     if (savedUser.role === "Tenant") {
-
-      window.location.href = "/MyApplications";
-
+      navigate("/MyApplications");
     }
-
 
     // Owner → Owner Dashboard
     else if (savedUser.role === "Owner") {
-
-      window.location.href = "/OwnerDashboard";
-
+      navigate("/OwnerDashboard");
     }
-
   };
-
 
   return (
     <div className="login-page">
@@ -105,9 +85,7 @@ const Login = () => {
           Login to continue to Rentzyy
         </p>
 
-
         {/* Role Selection */}
-
         <div className="role-selection">
 
           <button
@@ -121,7 +99,6 @@ const Login = () => {
           >
             Tenant
           </button>
-
 
           <button
             type="button"
@@ -137,13 +114,10 @@ const Login = () => {
 
         </div>
 
-
         {/* Login Form */}
-
         <form onSubmit={handleLogin}>
 
           {/* Email */}
-
           <div className="input-group">
 
             <label>
@@ -161,9 +135,7 @@ const Login = () => {
 
           </div>
 
-
           {/* Password */}
-
           <div className="input-group">
 
             <label>
@@ -181,9 +153,7 @@ const Login = () => {
 
           </div>
 
-
           {/* Login Button */}
-
           <button
             className="login-btn"
             type="submit"
@@ -193,9 +163,7 @@ const Login = () => {
 
         </form>
 
-
         {/* Signup */}
-
         <p className="signup-text">
 
           Don't have an account?
@@ -212,6 +180,4 @@ const Login = () => {
   );
 };
 
-
 export default Login;
-
