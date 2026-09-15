@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
+
   const [role, setRole] = useState("Tenant");
 
   const [name, setName] = useState("");
@@ -51,7 +53,7 @@ const Signup = () => {
 
     alert("Account created successfully!");
 
-    window.location.href = "/Login";
+    navigate("/Login");
   };
 
   return (
@@ -86,7 +88,6 @@ const Signup = () => {
         <form onSubmit={handleSignup}>
 
           <div className="input-group">
-
             <label>Name</label>
 
             <input
@@ -95,11 +96,9 @@ const Signup = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-
           </div>
 
           <div className="input-group">
-
             <label>Email</label>
 
             <input
@@ -108,11 +107,9 @@ const Signup = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-
           </div>
 
           <div className="input-group">
-
             <label>Password</label>
 
             <input
@@ -121,11 +118,9 @@ const Signup = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-
           </div>
 
           <div className="input-group">
-
             <label>Confirm Password</label>
 
             <input
@@ -134,7 +129,6 @@ const Signup = () => {
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
-
           </div>
 
           <button
